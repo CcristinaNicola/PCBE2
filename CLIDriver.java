@@ -45,5 +45,6 @@ public class CLIDriver
 			
 			
 		}
+		//sys.ot("au fost nr:"+publisher.get_counter());
 	}
 }
