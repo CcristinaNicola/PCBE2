@@ -18,6 +18,14 @@ public class Receiver implements MessageListener
 {
 	TopicConnection connection;
 	
+	//private int counter=0;
+	
+	//private void increment_counter(){counter++;}
+	
+	//public int get_counter(){return counter;}
+	
+	
+	
 	public Receiver(String topicFactory, String topicName) throws Exception
 	{
 		InitialContext ctx = new InitialContext();
@@ -52,6 +60,7 @@ public class Receiver implements MessageListener
 	@Override
 	public void onMessage(Message message)
 	{
+	//int count;
 //		try
 //		{
 //			TextMessage textMessage = (TextMessage) message;
@@ -69,6 +78,7 @@ public class Receiver implements MessageListener
 	        String source = msg.getStringProperty("sursa");
 	        String author = msg.getStringProperty("autor");
 	        String date = msg.getStringProperty("data");
+		//increment_counter();
 	        System.out.println("following message is received: "+msg.getText());  
 	        System.out.println("with : "+domain+", "+subdomain+", "+source+", "+author+", "+date);
 	        
